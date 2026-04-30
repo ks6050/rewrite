@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rewrite.ai</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Micro+5&family=Sixtyfour&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="input-wrapper" id="input-wrapper">
+        <div class="input-container">
+            <h1>rewrite<span class="ai-accent">.ai</span></h1>
+            <p class="subtitle">Paste a news article URL. Choose a lens. See how framing changes everything.</p>
+
+            <div class="input-section">
+                <input type="text" id="url-input" placeholder="Paste an article URL here...">
+                
+                <div class="lens-selector">
+                    <button class="lens-arrow" id="lens-prev">&#8592;</button>
+                    <span class="lens-display" id="lens-display">Select a lens</span>
+                    <button class="lens-arrow" id="lens-next">&#8594;</button>
+                </div>
+
+                <button id="submit-btn" disabled>Rewrite</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading" class="loading hidden">
+        <p>Rewriting...</p>
+    </div>
+
+    <div id="error" class="error hidden"></div>
+
+    <div id="output-wrapper" class="output-wrapper hidden">
+        <nav class="site-nav">
+            <span class="site-logo" id="site-logo"></span>
+        </nav>
+        <div class="output" id="output">
+            <div id="output-image-container" class="output-image-container hidden">
+                <img id="output-image" src="" alt="Generated article image">
+            </div>
+            <h2 id="output-headline"></h2>
+            <p id="output-subtitle" class="output-subtitle"></p>
+            <p id="output-meta" class="output-meta"></p>
+            <div id="output-body" class="output-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
